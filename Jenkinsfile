@@ -18,6 +18,14 @@ pipeline {
                    cd ..
                 """)
              }
+             post {
+                success {
+                   echo "Production Deploy Approved"
+                }
+                aborted {
+                   echo "Production Deploy Denied"
+                }
+             }
       }
     }
 }
