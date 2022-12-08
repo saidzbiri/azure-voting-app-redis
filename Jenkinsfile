@@ -22,7 +22,7 @@ pipeline {
                 success {
                    echo "Production Deploy Approved"
                 }
-                aborted {
+                failure {
                    echo "Production Deploy Denied"
                 }
              }
